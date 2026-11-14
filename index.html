@@ -56,84 +56,221 @@ iframe{width:100%;height:152px;border:0;border-radius:12px}
 <div class="petals" id="petals" aria-hidden="true"></div>
 <main><section class="card">
   <div class="floral" aria-label="Pink roses and lilies"><span class="rose">🌹</span><span class="sprig">❧</span>
-  <svg viewBox="0 0 64 64" role="img" aria-label="Pink lily"><g fill="#f4bfd4" stroke="#d98eae" stroke-width="1.5"><path d="M32 31C13 27 14 10 25 8c5 5 7 13 7 23Z"/><path d="M32 31C18 14 28 3 35 7c3 8 2 16-3 24Z"/><path d="M32 31C37 10 53 12 54 22c-4 7-12 10-22 9Z"/><path d="M32 31C51 29 54 45 45 51c-8-2-13-9-13-20Z"/><path d="M32 31C34 50 19 56 12 47c1-8 8-14 20-16Z"/><path d="M32 31C14 39 5 27 11 18c8-2 15 3 21 13Z"/></g><circle cx="32" cy="31" r="4" fill="#d6a54b"/><path d="M32 35Q30 48 24 57" fill="none" stroke="#55745b" stroke-width="2"/></svg>
-  <span class="rose">🌹</span></div><div class="eyebrow">A little something for you</div>
-  <h1>Before you go ♡</h1>
-  <p class="sub">A little note, made just for you.</p>
-  <div class="envelope-wrap">
-    <button class="envelope" id="envelope" aria-label="Open the letter">
-      <div class="letter-peek"></div><div class="env-front"></div><div class="env-flap"></div><div class="seal">♡</div>
-    </button>
-  </div>
-  <div class="hint" id="hint">Tap the envelope to open</div>
+    <svg viewBox="0 0 64 64" role="img" aria-label="Pink lily"><g fill="#f4bfd4" stroke="#d98eae" stroke-width="1.5"><path d="M32 31C13 27 14 10 25 8c5 5 7 13 7 23Z"/><path d="M32 31C18 14 28 3 35 7c3 8 2 16-3 24Z"/><path d="M32 31C37 10 53 12 54 22c-4 7-12 10-22 9Z"/><path d="M32 31C51 29 54 45 45 51c-8-2-13-9-13-20Z"/><path d="M32 31C34 50 19 56 12 47c1-8 8-14 20-16Z"/><path d="M32 31C14 39 5 27 11 18c8-2 15 3 21 13Z"/></g><circle cx="32" cy="31" r="4" fill="#d6a54b"/><path d="M32 35Q30 48 24 57" fill="none" stroke="#55745b" stroke-width="2"/></svg>
+      <span class="rose">🌹</span></div><div class="eyebrow">A little something for you</div>
+        <h1>Before you go ♡</h1>
+          <p class="sub">A little note, made just for you.</p>
+            <div class="envelope-wrap">
+                <button class="envelope" id="envelope" aria-label="Open the letter">
+                      <div class="letter-peek"></div><div class="env-front"></div><div class="env-flap"></div><div class="seal">♡</div>
+                          </button>
+                            </div>
+                              <div class="hint" id="hint">Tap the envelope to open</div>
 
-  <div class="content" id="content">
-    <section>
-      <h2 class="section-title">Your letter ♡</h2>
-      <p class="edit-note">Replace the prompts below with your own words.</p>
-      <div class="letter-paper">
-        <textarea class="letter-input" aria-label="Write your letter"
-          placeholder="Dear Maya,&#10;&#10;When you told me you were moving itfelt like a piece of me went missing, I'm going to miss you so much and  I feel sad that we didn't have more time... but all those emotions make me lucky because it meant I found something that means alot me.
+                                <div class="content" id="content">
+                                    <section>
+                                          <h2 class="section-title">Your letter ♡</h2>
+                                                <p class="edit-note">Replace the prompts below with your own words.</p><!DOCTYPE html>
+                                                <html lang="en">
+                                                <head>
+                                                <meta charset="UTF-8">
+                                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                                <meta name="theme-color" content="#172747">
+                                                <title>A little something for you ♡</title>
+                                                <style>
+                                                :root{--ink:#172747;--rose:#e9a9c0;--paper:#fffafd;--pink:#f7dce8;--navy:#172747;--baby:#f7dce8}
+                                                *{box-sizing:border-box}
+                                                body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at top,#fffafd 0,#f8e5ed 55%,#e8d7e7 100%);overflow-x:hidden}
+                                                .petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+                                                .petal{position:absolute;top:-30px;color:#e5a1bc;opacity:.58;animation:fall linear infinite}
+                                                @keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+                                                main{position:relative;z-index:1;width:min(720px,calc(100% - 28px));margin:30px auto}
+                                                .card{background:rgba(255,250,253,.96);border:1px solid rgba(23,39,71,.18);border-radius:24px;padding:clamp(20px,5vw,42px);box-shadow:0 18px 55px rgba(111,73,76,.12);text-align:center}
+                                                .floral{display:flex;align-items:center;justify-content:center;gap:13px;margin:0 auto 12px;color:#b95f82;font-size:25px}.floral svg{width:42px;height:42px;filter:drop-shadow(0 3px 3px #17274718)}.floral .rose{font-size:30px}.floral .sprig{color:#48664e;font-size:22px}
+                                                .eyebrow{letter-spacing:.2em;text-transform:uppercase;font:11px Arial,sans-serif;color:#263b65}
+                                                h1{color:#172747;font-size:clamp(34px,8vw,54px);font-weight:normal;margin:14px 0 8px}
+                                                .sub{font-style:italic;color:#65718c;margin:0 0 25px}
+                                                .envelope-wrap{display:grid;place-items:center;margin:30px auto 16px}
+                                                .envelope{position:relative;width:min(290px,75vw);height:184px;border:0;cursor:pointer;background:#f1c5d7;border-radius:8px;box-shadow:0 12px 22px #8b62622b;transition:transform .25s;padding:0}
+                                                .envelope:hover{transform:translateY(-4px)}
+                                                .env-front{position:absolute;inset:0;background:#f7dce8;clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%);border-radius:8px}
+                                                .env-flap{position:absolute;inset:0;background:#e9a9c0;clip-path:polygon(0 0,100% 0,50% 60%);transform-origin:top;transition:transform .7s;z-index:3}
+                                                .seal{position:absolute;z-index:4;left:50%;top:55%;transform:translate(-50%,-50%);width:43px;height:43px;border-radius:50%;background:#172747;color:#fff;display:grid;place-items:center;font-size:22px}
+                                                .letter-peek{position:absolute;left:9%;right:9%;bottom:10px;height:130px;background:#fffafd;border-radius:5px;transition:transform .8s}
+                                                .envelope.open .env-flap{transform:rotateX(180deg);z-index:0}
+                                                .envelope.open .letter-peek{transform:translateY(-95px)}
+                                                .envelope.open .seal{opacity:0}
+                                                .hint{font:13px Arial,sans-serif;color:#536381}
+                                                .content{display:none;text-align:left;margin:34px auto 0;max-width:580px;animation:appear .8s ease both}
+                                                .content.show{display:block}
+                                                @keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+                                                .section-title{color:#172747;text-align:center;font-size:29px;font-weight:normal;margin:0 0 20px}
+                                                .edit-note{text-align:center;font:12px Arial,sans-serif;color:#65718c;margin:-8px 0 20px}
+                                                .letter-paper{background:#fffafd;border:1px solid #dce1ef;border-radius:14px;padding:clamp(18px,4vw,28px);min-height:300px;line-height:1.8;font-size:17px}
+                                                .placeholder{color:#7885a0;font-style:italic}
+                                                .line{border-bottom:1px dashed #dce1ef;min-height:35px;margin:4px 0 10px}
+                                                .signoff{margin-top:22px}
+                                                .photos{margin-top:34px;padding-top:25px;border-top:1px solid #dce1ef}
+                                                .photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+                                                .photo-slot{min-height:155px;border:1.5px dashed #d49ab3;border-radius:13px;background:#fff5fa;display:grid;place-items:center;overflow:hidden;position:relative}
+                                                .photo-slot img{width:100%;height:100%;min-height:155px;object-fit:cover;position:absolute;inset:0}
+                                                .photo-slot label{cursor:pointer;text-align:center;padding:15px;color:#31466f;font:13px Arial,sans-serif}
+                                                .photo-slot input{display:none}
+                                                .music{margin:34px auto 0;padding-top:25px;border-top:1px solid #dce1ef;text-align:center}
+                                                .music h3{color:#172747;font-weight:normal;font-size:25px;margin:0 0 8px}
+                                                .music p{font:13px Arial,sans-serif;color:#65718c;margin:0 0 15px}
+                                                iframe{width:100%;height:152px;border:0;border-radius:12px}
+                                                .footer{text-align:center;font:12px Arial,sans-serif;color:#536381;margin:22px 0}
+                                                @media(max-width:480px){main{margin:15px auto}.card{border-radius:19px}.photo-slot{min-height:125px}.photo-slot img{min-height:125px}}
+                                                </style>
+                                                </head>
+                                                <body>
+                                                <div class="petals" id="petals" aria-hidden="true"></div>
+                                                <main><section class="card">
+                                                  <div class="floral" aria-label="Pink roses and lilies"><span class="rose">🌹</span><span class="sprig">❧</span>
+                                                    <svg viewBox="0 0 64 64" role="img" aria-label="Pink lily"><g fill="#f4bfd4" stroke="#d98eae" stroke-width="1.5"><path d="M32 31C13 27 14 10 25 8c5 5 7 13 7 23Z"/><path d="M32 31C18 14 28 3 35 7c3 8 2 16-3 24Z"/><path d="M32 31C37 10 53 12 54 22c-4 7-12 10-22 9Z"/><path d="M32 31C51 29 54 45 45 51c-8-2-13-9-13-20Z"/><path d="M32 31C34 50 19 56 12 47c1-8 8-14 20-16Z"/><path d="M32 31C14 39 5 27 11 18c8-2 15 3 21 13Z"/></g><circle cx="32" cy="31" r="4" fill="#d6a54b"/><path d="M32 35Q30 48 24 57" fill="none" stroke="#55745b" stroke-width="2"/></svg>
+                                                      <span class="rose">🌹</span></div><div class="eyebrow">A little something for you</div>
+                                                        <h1>Before you go ♡</h1>
+                                                          <p class="sub">A little note, made just for you.</p>
+                                                            <div class="envelope-wrap">
+                                                                <button class="envelope" id="envelope" aria-label="Open the letter">
+                                                                      <div class="letter-peek"></div><div class="env-front"></div><div class="env-flap"></div><div class="seal">♡</div>
+                                                                          </button>
+                                                                            </div>
+                                                                              <div class="hint" id="hint">Tap the envelope to open</div>
 
-Words can't even describe how much you mean to me, all the things you do like sending me  photos, telling me about your day, your silly jokes and randomness all these things me me feel like your comfortable with me which in turn makes me comfortable and makes me feel special to someone. It still amazes me how someone who i met randomly became the same person who i think about 24/7, who brings a smile to my face at just the thought of her or at hearing her name(im beaming right now typing this). You don't know how much you make me overthink, how much times I've thought about our future, how much times you got stuck in my head and I couldn't get you out. In this last month you've made me feel like the luckiest guy in the world to have ran into you and it pains my heart at the thought of losing you, of us drifting apart, of not having someone who i can talk to about whatever and someone who light up my life by just talking to them. Its so confusing because we only met in person once yet I've never felt so sure about somebody in my life like this before. 
+                                                                                <div class="content" id="content">
+                                                                                    <section>
+                                                                                          <h2 class="section-title">Your letter ♡</h2>
+                                                                                                <p class="edit-note">Replace the prompts below with your own words.</p>
+                                                                                                              <textarea class="letter-input" aria-label="Write your letter
+                                                                                                                        placeholder="Dear Maya,&#10;&#10;When you told me you were moving itfelt like a piece of me went missing, I'm going to miss you so much and  I feel sad that we didn't have more time... but all those emotions make me lucky because it meant I found something that means alot me.
 
-Maya you genuinely are such a special girl and im glad I got to spend my time with you.
+                                                                                                                        Words can't even describe how much you mean to me, all the things you do like sending me  photos, telling me about your day, your silly jokes and randomness all these things me me feel like your comfortable with me which in turn makes me comfortable and makes me feel special to someone. It still amazes me how someone who i met randomly became the same person who i think about 24/7, who brings a smile to my face at just the thought of her or at hearing her name(im beaming right now typing this). You don't know how much you make me overthink, how much times I've thought about our future, how much times you got stuck in my head and I couldn't get you out. In this last month you've made me feel like the luckiest guy in the world to have ran into you and it pains my heart at the thought of losing you, of us drifting apart, of not having someone who i can talk to about whatever and someone who light up my life by just talking to them. Its so confusing because we only met in person once yet I've never felt so sure about somebody in my life like this before. 
 
-Nu m-aș fi gândit niciodată în viața mea că îi voi spune asta cuiva pe care îl cunosc de doar o lună, dar... te iubesc, Maya.
+                                                                                                                        Maya you genuinely are such a special girl and im glad I got to spend my time with you.
+
+                                                                                                                        Nu m-aș fi gândit niciodată în viața mea că îi voi spune asta cuiva pe care îl cunosc de doar o lună, dar... te iubesc, Maya.
 
 
-&#10;&#10;From Caiden"></textarea>
-        <p class="edit-note" style="margin:12px 0 0">Tap inside the letter to type. Your writing stays in this page while it is open.</p>
-      </div>
-    </section>
+                                                                                                                        &#10;&#10;From Caiden"></textarea>
+                                                                                                                                <p class="edit-note" style="margin:12px 0 0">Tap inside the letter to type. Your writing stays in this page while it is open.</p>
+                                                                                                                                      </div>
+                                                                                                                                          </section>
 
-    <<section class="photos">
-  <h2 class="section-title">My favourite photos 📷</h2>
+                                                                                                                                              <<section class="photos">
+                                                                                                                                                <h2 class="section-title">My favourite photos 📷</h2>
 
-  <div class="photo-grid">
-    <div class="photo-slot">
-      <img src="IMG-20261106-WA0012.jpg">
-    </div>
+                                                                                                                                                  <div class="photo-grid">
+                                                                                                                                                      <div class="photo-slot">
+                                                                                                                                                            <img src="IMG-20261106-WA0012.jpg">
+                                                                                                                                                                </div>
 
-    <div class="photo-slot">
-      <img src="IMG-20261106-WA0010.jpg">
-    </div>
+                                                                                                                                                                    <div class="photo-slot">
+                                                                                                                                                                          <img src="IMG-20261106-WA0010.jpg">
+                                                                                                                                                                              </div>
 
-    <div class="Photo-slot">
-      <img src="IMG-20261101-WA0003.jpg">
-    </div>
+                                                                                                                                                                                  <div class="Photo-slot">
+                                                                                                                                                                                        <img src="IMG-20261101-WA0003.jpg">
+                                                                                                                                                                                            </div>
 
-    <div class="photo-slot">
-      <img src="IMG-20261030-WA0016.jpg">
-    </div>
-  </div>
-    </section>
+                                                                                                                                                                                                <div class="photo-slot">
+                                                                                                                                                                                                      <img src="IMG-20261030-WA0016.jpg">
+                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                </section>
 
-    <section class="music">
-      <h3>A song for you ♫</h3>
-      <p>Press play while you read.</p>
-      <iframe src="https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl?utm_source=generator&theme=0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy" title="Spotify song player"></iframe>
-    </section>
-  </div>
-</section><div class="footer">Made with care ♡</div></main>
-<script>
-const envelope=document.getElementById('envelope'),content=document.getElementById('content');
-envelope.addEventListener('click',()=>{
- envelope.classList.add('open');
- document.getElementById('hint').textContent='A little note, just for you ♡';
- setTimeout(()=>{content.classList.add('show');content.scrollIntoView({behavior:'smooth',block:'start'});},550);
-});
-document.querySelectorAll('.photo-slot input').forEach(input=>{
- input.addEventListener('change',()=>{
-  const file=input.files&&input.files[0];if(!file)return;
-  const slot=input.closest('.photo-slot');let img=slot.querySelector('img');
-  if(!img){img=document.createElement('img');slot.appendChild(img);}
-  img.src=URL.createObjectURL(file);slot.querySelector('label').style.display='none';
- });
-});
-const petals=document.getElementById('petals');
-for(let i=0;i<18;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','♡'][i%3];p.style.left=Math.random()*100+'%';p.style.animationDuration=9+Math.random()*12+'s';p.style.animationDelay=-Math.random()*18+'s';p.style.fontSize=12+Math.random()*13+'px';petals.appendChild(p);}
-</script>
-</body></html>
+                                                                                                                                                                                                                    <section class="music">
+                                                                                                                                                                                                                          <h3>A song for you ♫</h3>
+                                                                                                                                                                                                                                <p>Press play while you read.</p>
+                                                                                                                                                                                                                                      <iframe src="https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl?utm_source=generator&theme=0"
+                                                                                                                                                                                                                                              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                                                                                                                                                                                                                                      loading="lazy" title="Spotify song player"></iframe>
+                                                                                                                                                                                                                                                          </section>
+                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                            </section><div class="footer">Made with care ♡</div></main>
+                                                                                                                                                                                                                                                            <script>
+                                                                                                                                                                                                                                                            const envelope=document.getElementById('envelope'),content=document.getElementById('content');
+                                                                                                                                                                                                                                                            envelope.addEventListener('click',()=>{
+                                                                                                                                                                                                                                                             envelope.classList.add('open');
+                                                                                                                                                                                                                                                              document.getElementById('hint').textContent='A little note, just for you ♡';
+                                                                                                                                                                                                                                                               setTimeout(()=>{content.classList.add('show');content.scrollIntoView({behavior:'smooth',block:'start'});},550);
+                                                                                                                                                                                                                                                               });
+                                                                                                                                                                                                                                                               document.querySelectorAll('.photo-slot input').forEach(input=>{
+                                                                                                                                                                                                                                                                input.addEventListener('change',()=>{
+                                                                                                                                                                                                                                                                  const file=input.files&&input.files[0];if(!file)return;
+                                                                                                                                                                                                                                                                    const slot=input.closest('.photo-slot');let img=slot.querySelector('img');
+                                                                                                                                                                                                                                                                      if(!img){img=document.createElement('img');slot.appendChild(img);}
+                                                                                                                                                                                                                                                                        img.src=URL.createObjectURL(file);slot.querySelector('label').style.display='none';
+                                                                                                                                                                                                                                                                         });
+                                                                                                                                                                                                                                                                         });
+                                                                                                                                                                                                                                                                         const petals=document.getElementById('petals');
+                                                                                                                                                                                                                                                                         for(let i=0;i<18;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','♡'][i%3];p.style.left=Math.random()*100+'%';p.style.animationDuration=9+Math.random()*12+'s';p.style.animationDelay=-Math.random()*18+'s';p.style.fontSize=12+Math.random()*13+'px';petals.appendChild(p);}
+                                                                                                                                                                                                                                                                         </script>
+                                                                                                                                                                                                                                                                         </body></html>ghgʻ
+                                                      <div class="letter-paper">
+                                                              <textarea class="letter-input" aria-label="Write your letter"
+                                                                        placeholder="Dear Maya,&#10;&#10;When you told me you were moving itfelt like a piece of me went missing, I'm going to miss you so much and  I feel sad that we didn't have more time... but all those emotions make me lucky because it meant I found something that means alot me.
+
+                                                                        Words can't even describe how much you mean to me, all the things you do like sending me  photos, telling me about your day, your silly jokes and randomness all these things me me feel like your comfortable with me which in turn makes me comfortable and makes me feel special to someone. It still amazes me how someone who i met randomly became the same person who i think about 24/7, who brings a smile to my face at just the thought of her or at hearing her name(im beaming right now typing this). You don't know how much you make me overthink, how much times I've thought about our future, how much times you got stuck in my head and I couldn't get you out. In this last month you've made me feel like the luckiest guy in the world to have ran into you and it pains my heart at the thought of losing you, of us drifting apart, of not having someone who i can talk to about whatever and someone who light up my life by just talking to them. Its so confusing because we only met in person once yet I've never felt so sure about somebody in my life like this before. 
+
+                                                                        Maya you genuinely are such a special girl and im glad I got to spend my time with you.
+
+                                                                        Nu m-aș fi gândit niciodată în viața mea că îi voi spune asta cuiva pe care îl cunosc de doar o lună, dar... te iubesc, Maya.
+
+
+                                                                        &#10;&#10;From Caiden"></textarea>
+                                                                                <p class="edit-note" style="margin:12px 0 0">Tap inside the letter to type. Your writing stays in this page while it is open.</p>
+                                                                                      </div>
+                                                                                          </section>
+
+                                                                                              <<section class="photos">
+                                                                                                <h2 class="section-title">My favourite photos 📷</h2>
+
+                                                                                                  <div class="photo-grid">
+                                                                                                      <div class="photo-slot">
+                                                                                                            <img src="IMG-20261106-WA0012.jpg">
+                                                                                                                </div>
+
+                                                                                                                    <div class="photo-slot">
+                                                                                                                          <img src="IMG-20261106-WA0010.jpg">
+                                                                                                                              </div>
+
+                                                                                                                                  <div class="Photo-slot">
+                                                                                                                                        <img src="IMG-20261101-WA0003.jpg">
+                                                                                                                                            </div>
+
+                                                                                                                                                <div class="photo-slot">
+                                                                                                                                                      <img src="IMG-20261030-WA0016.jpg">
+                                                                                                                                                          </div>
+                                                                                                                                                            </div>
+                                                                                                                                                                </section>
+
+                                                                                                                                                                    <section class="music">
+                                                                                                                                                                          <h3>A song for you ♫</h3>
+                                                                                                                                                                                <p>Press play while you read.</p>
+                                                                                                                                                                                      <iframe src="https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl?utm_source=generator&theme=0"
+                                                                                                                                                                                              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                                                                                                                                                                                      loading="lazy" title="Spotify song player"></iframe>
+                                                                                                                                                                                                          </section>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                            </section><div class="footer">Made with care ♡</div></main>
+                                                                                                                                                                                                            <script>
+                                                                                                                                                                                                            const envelope=document.getElementById('envelope'),content=document.getElementById('content');
+                                                                                                                                                                                                            envelope.addEventListener('click',()=>{
+                                                                                                                                                                                                             envelope.classList.add('open');
+                                                                                                                                                                                                              document.getElementById('hint').textContent='A little note, just for you ♡';
+                                                                                                                                                                                                               setTimeout(()=>{content.classList.add('show');content.scrollIntoView({behavior:'smooth',block:'start'});},550);
+                                                                                                                                                                                                               });
+                                                                                                                                                                                                               document.querySelectorAll('.photo-slot input').forEach(input=>{
+                                                                                                                                                                                                                input.addEventListener('change',()=>{
+                                                                                                                                                                                                                  const file=input.files&&input.files[0];if(!file)return;
+                                                                                                                                                                                                                    const slot=input.closest('.photo-slot');let img=slot.querySelector('img');
+                                                                                                                                                                                                                      if(!img){img=document.createElement('img');slot.appendChild(img);}
+                                                                                                                                                                                                                        img.src=URL.createObjectURL(file);slot.querySelector('label').style.display='none';
+                                                                                                                                                                                                                         });
+                                                                                                                                                                                                                         });
+                                                                                                                                                                                                                         const petals=document.getElementById('petals');
+                                                                                                                                                                                                                         for(let i=0;i<18;i++){const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','♡'][i%3];p.style.left=Math.random()*100+'%';p.style.animationDuration=9+Math.random()*12+'s';p.style.animationDelay=-Math.random()*18+'s';p.style.fontSize=12+Math.random()*13+'px';petals.appendChild(p);}
+                                                                                                                                                                                                                         </script>
+                                                                                                                                                                                                                         </body></html>
